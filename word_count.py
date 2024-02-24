@@ -139,10 +139,6 @@ def job(input_directory, output_directory):
     save_output(output_directory, sequence)
     create_marker(output_directory)
 
-#job(
-#    input_directory="input",
-#    output_directory="output-demo",
-#)
 
 if __name__ == "__main__":
     job(
