@@ -80,14 +80,14 @@ def shuffle_and_sort(sequence):
 # texto.
 #
 def reducer(sequence):
-    diccionario = {}
+    dic={}
     for key, value in sequence:
-        if key not in diccionario.keys():
-            diccionario[key] = []
-        diccionario[key].append(value)
+        if key not in dic.keys():
+            dic[key] = []
+        dic[key].append(value)
     
     new_sequence = []  
-    for key, value in diccionario.items():
+    for key, value in dic.items():
         tupla = (key, sum(value))
         new_sequence.append(tupla)
         
@@ -114,7 +114,7 @@ def create_output_directory(output_directory):
 # separados por un tabulador.
 #
 def save_output(output_directory, sequence):
-    with open(output_directory + "/part-0000", "w") as file:
+    with open(output_directory + "/part-00000", "w") as file:
         for key, value in sequence:
             file.write(f"{key}\t{value}\n")
 
